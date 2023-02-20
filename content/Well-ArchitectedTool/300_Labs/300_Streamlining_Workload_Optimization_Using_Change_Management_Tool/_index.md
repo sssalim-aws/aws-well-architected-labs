@@ -25,7 +25,7 @@ The integration will allow you to manage the lifecycle of the improvement items 
 
 ## Architecture overview
 
-![OverallArchitecture](/Well-ArchitectedTool/300_Labs/300_Streamlining_Workload_Optimization_Using_Change_Management_Tool/Images/overall_architecture.png)
+![OverallArchitecture](/watool/300_Streamlining_Workload_Optimization_Using_Change_Management_Tool/Images/overall_architecture.png)
 
 ## Goals
 
