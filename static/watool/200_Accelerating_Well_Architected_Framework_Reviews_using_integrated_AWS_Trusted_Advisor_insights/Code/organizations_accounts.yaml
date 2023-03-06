@@ -1,0 +1,23 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Parameters:
+  OrganizationRoot:
+    Description: 'Organization ID'
+    Type: String
+  Email:
+    Description: 'Account Email'
+    Type: String
+
+Resources:
+  WorkloadOU:
+      Type: AWS::Organizations::OrganizationalUnit
+      Properties:
+          Name: Workload
+          ParentId: !Ref OrganizationRoot
+
+  WorkloadAccountA:
+      Type: AWS::Organizations::Account
+      Properties:
+          AccountName: WorkloadAccountA
+          Email: Email
+          ParentIds: [{"Ref": "WorkloadOU"}]            

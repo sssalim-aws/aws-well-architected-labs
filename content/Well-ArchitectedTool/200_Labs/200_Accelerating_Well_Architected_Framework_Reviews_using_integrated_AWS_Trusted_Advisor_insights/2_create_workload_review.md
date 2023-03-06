@@ -6,6 +6,13 @@ weight: 2
 pre: "<b>2. </b>"
 ---
  
+
+With the sample workload deployed, you can now conduct the AWS Well-Architected Framework Review on it. The purpose of this review exercise is to measure the alignment of the workload with the AWS Well-Architected Framework Best Practices. Information about the workload architecture and practices is gathered through conversations with related stakeholders, guided by the questions and information in the AWS Well-Architected Tool. 
+
+In this section of the lab, you will create a workload in the AWS Well-Architected tool  
+
+
+
  The Well-Architected Framework Reviews are conducted per workload. A workload is a collection of resources and code that delivers business value, such as a customer-facing application or a backend process. 
  
 1. We will start with creating a workload in the Well-Architected Tool. Click **Define workload** associated with the necessary AWS tags.
