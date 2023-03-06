@@ -19,21 +19,20 @@ Follow below instructions to deploy the workload:
 
 In this first step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stack that builds a sample workload along with the necessary underlying resource. You can choose the to deploy stack in one of the regions below. 
 
-1. Click on the link below to deploy the stack. This will take you to the CloudFormation console in your account. Use `walab-wata-sample-workload` as the stack name, and take the default values for all options.
+1. Click on the link below to deploy the stack. This will take you to the CloudFormation console in your account. Use `walab-wata-sample-workload` as the stack name, take the default values for all options, and create stack.
 
     * **us-west-2** : [here](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
     
 
-    *   **ap-southeast-2** : [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
+    * **ap-southeast-2** : [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacks/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
     
 
-    * **ap-southeast-1** : [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?
-    stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
+    * **ap-southeast-1** : [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
 
 
 
-
-### 1.1. Confirm the Deployment status.
+<!-- 
+### 1.1. Confirm the Deployment status. -->
 <!-- 
 Once the application is successfully deployed, go to your [CloudFormation console](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2) and locate the stack named `walab-ops-sample-application`.
 
@@ -55,8 +54,8 @@ Once the application is successfully deployed, go to your [CloudFormation consol
   There will be 2 emails sent to your address, please ensure to subscribe to **both** of them.
   {{% /notice %}} -->
 
-
-### 1.2. Test Workload.
+<!-- 
+### 1.2. Test Workload. -->
 
 <!-- In this section, you will be testing the encrypt API action from the deployed application. 
 
