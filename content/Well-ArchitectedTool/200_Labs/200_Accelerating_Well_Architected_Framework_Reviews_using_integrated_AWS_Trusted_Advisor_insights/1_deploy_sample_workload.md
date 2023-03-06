@@ -1,11 +1,23 @@
 ---
-title: "Deploy infrastructure"
-menutitle: "Deploy infrastructure"
+title: "Deploy Sample Workload"
+menutitle: "Deploy Sample Workload"
 date: 2021-08-31T11:16:09-04:00
 chapter: false
 weight: 1
 pre: "<b>1. </b>"
 ---
+
+
+In this section, you will deploy the sample workload and AWS infrastructure resources that you will run the AWS Well-Architected Framework Review against. Once you have completed this lab, you will have a workload deployed in your AWS account with the architecture shown below.
+
+![SampleWorkload](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_sample_workload_architecture_before.png)
+
+
+Follow below instructions to deploy the workload:
+
+
+
+
 You will use AWS CloudFormation to deploy some of the infrastructure for this lab. The CloudFormation stack that you provision will create the following resources:
 
 * A Virtual Private Cloud to provide an isolated environment for the application

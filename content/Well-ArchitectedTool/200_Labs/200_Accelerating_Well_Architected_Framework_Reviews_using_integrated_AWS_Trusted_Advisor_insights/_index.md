@@ -33,7 +33,7 @@ The skills you learn will help you to accelerate your cloud optimization by redu
 
 * Enable AWS Well-Architected Tool integration with AWS Trusted Advisor across multiple account.
 * Perform Well-Architected Framework Review and use AWS Trusted Advisor integration to define Imprevement action item.
-* Track and record Improvement action items in JIRA for accountability & Visibility
+* Track and record Improvement action items in JIRA for accountability & visibility.
 
 ## Prerequisites:
 
@@ -43,7 +43,7 @@ The skills you learn will help you to accelerate your cloud optimization by redu
 
 **NOTE**: You will be billed for any applicable AWS resources used as part of this lab, that are not covered in the AWS Free Tier.
 
-{{< prev_next_button link_next_url="./1_deploy_infrastructure/" button_next_text="Start Lab" first_step="true" />}}
+{{< prev_next_button link_next_url="./1_deploy_sample_workload/" button_next_text="Start Lab" first_step="true" />}}
 
 ## Steps:
 {{% children  %}}
