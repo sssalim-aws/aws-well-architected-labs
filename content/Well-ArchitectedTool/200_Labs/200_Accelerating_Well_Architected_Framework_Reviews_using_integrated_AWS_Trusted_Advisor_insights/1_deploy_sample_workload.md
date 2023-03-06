@@ -18,12 +18,20 @@ Follow below instructions to configure the workload:
 
 ### 1.0. Provision the Workload Account using AWS Organization.
 
-1. Sign in to the AWS Management Console using your root account credentials.
+1. Sign in to the AWS Management Console using your Administrator credentials.
 2. Navigate to the AWS Organizations console.
-3. Click on the "Get started" button to enable AWS Organizations.
-4. Select "Enable all features" and click on "Next".
-5. Review the information on the next screen and click on "Create organization".
-6. Once your organization is created, navigate to the "Organize accounts" page.
+
+    ![Section1_1.2](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.2.png)
+
+3. If this is the first time you are using AWS Organization, on the Introduction page, choose **Create an organization**. 
+   Follow the prompts, and enter your email address to verify your email. 
+   If you already have an AWS Organizations set up in your account, you can skip this step.
+
+4. Once your organization is created, navigate to the "Organize accounts" page. 
+   Confirm that AWS Organizations is created in your account. When your organization is fully created, you will be able to view your Root OU of your organizations as per screenshot below.
+
+    ![Section1_1.4](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.4.png)
+
 7. Click on "Create Organizational Unit".
 8. Enter "Workload" as the name of the OU and click on "Create".
 9. Navigate to the "Accounts" tab and click on "Create account".
