@@ -31,9 +31,9 @@ In this first step you will provision a [CloudFormation](https://aws.amazon.com/
 
 
 
-<!-- 
+ 
 ### 1.1. Confirm the Deployment status. -->
-<!-- 
+
 Once the application is successfully deployed, go to your [CloudFormation console](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2) and locate the stack named `walab-ops-sample-application`.
 
   1. Confirm that the stack is in a **'CREATE_COMPLETE'** state. 
@@ -54,8 +54,8 @@ Once the application is successfully deployed, go to your [CloudFormation consol
   There will be 2 emails sent to your address, please ensure to subscribe to **both** of them.
   {{% /notice %}} -->
 
-<!-- 
-### 1.2. Test Workload. -->
+
+### 1.2. Test Workload.
 
 <!-- In this section, you will be testing the encrypt API action from the deployed application. 
 
