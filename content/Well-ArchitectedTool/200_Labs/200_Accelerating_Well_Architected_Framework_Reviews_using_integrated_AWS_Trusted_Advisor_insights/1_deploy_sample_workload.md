@@ -8,7 +8,10 @@ pre: "<b>1. </b>"
 ---
 
 
-In this section, you will deploy the sample workload and AWS infrastructure resources that you will run the AWS Well-Architected Framework Review against. Once you have completed this lab, you will have a workload deployed in your AWS account with the architecture shown below.
+In this section, you will deploy a sample workload resources that you will run the Well-Architected Framework Review against.
+The workload will be deployed in a separate AWS account simulating a multi account environment.  
+
+Once you have completed this lab, you will have a workload deployed in your AWS account with the architecture shown below.
 
 ![SampleWorkload](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_sample_workload_architecture_before.png)
 
