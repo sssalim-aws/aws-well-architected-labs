@@ -31,9 +31,9 @@ The skills you learn will help you to accelerate your cloud optimization by redu
 
 ## Goals:
 
-* Enabling the AWS Well-Architected Tool integration with AWS Trusted Advisor
-* Reduce the time required to perform WAFRs using insights from AWS Trusted Advisor
-* Ensure accountability of the review by using JIRA integration.
+* Enable AWS Well-Architected Tool integration with AWS Trusted Advisor across multiple account.
+* Perform Well-Architected Framework Review and use AWS Trusted Advisor integration to define Imprevement action item.
+* Track and record Improvement action items in JIRA for accountability & Visibility
 
 ## Prerequisites:
 
