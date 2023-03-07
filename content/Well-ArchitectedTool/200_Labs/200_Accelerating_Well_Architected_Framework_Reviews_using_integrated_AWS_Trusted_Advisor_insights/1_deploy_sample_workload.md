@@ -27,36 +27,53 @@ Follow below instructions to configure the workload:
    Follow the prompts, and enter your email address to verify your email. 
    If you already have an AWS Organizations set up in your account, you can skip this step.
 
-4. Once your organization is created, navigate to the "Organize accounts" page. 
-   Confirm that AWS Organizations is created in your account. When your organization is fully created, you will be able to view your Root OU of your organizations as per screenshot below.
+4. Once your organization is created, navigate to the "AWS accounts" page from the left menu. Confirm that AWS Organizations is created. 
+   When your organization is fully created, you will be able to view your Root OU of your organizations as per screenshot below.
 
     ![Section1_1.4](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.4.png)
 
-7. Click on "Create Organizational Unit".
-8. Enter "Workload" as the name of the OU and click on "Create".
-9. Navigate to the "Accounts" tab and click on "Create account".
-10. Enter the email address "hula@hula.com" and other required details for the new account.
-11. Choose a password for the new account and click on "Create account".
-12. AWS will send an email to the email address specified in step 10.
-13. Follow the instructions in the email to complete the account setup.
-14. Once the account setup is complete, the new account will appear under the "Accounts" tab.
-15. Select the account and click on "Move account".
-16. Choose the "Workload" OU as the destination and click on "Move".
-17. The account is now in the "Workload" OU.
+5. Select the **Root** OU, then click on **Actions**.
+6. Under **Organizational Unit** click on **Create new**.
+
+    ![Section1_1.6](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.6.png)
+
+7. Enter `Workload` as the name of the OU and click **Create organizational unit**.
+8. Navigate back to the **AWS accounts** page and  tab and click on **Add an AWS Account**.
+
+    ![Section1_1.8](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.8.png)
+
+9. Enter `SampleWorkload` as the name of the account, type in your `email address` for the account.
+   Wait for the email to arrive in your inbox and verify the temail.
+
+10. Nagivate or referesh the "AWS accounts" page view.
+11. Select the new account you just create, then click on **Actions** and **Move** under AWS account.
+12. Select the **Wordload** OU you created before, then click **Move AWS Account**
+
+    ![Section1_1.12](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.12.png)
+
+13. You have now created the Sample Workload Account in the Workload Organization Unit.
 
 ### 2.0. Configure AWS CloudFormation StackSet.
 
-1.  Open the AWS CloudFormation console.
+1.  Navigate to the AWS Organizations console.
+    
+    ![Section1_2.1](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_2.1.png)
+
 2.  Choose "StackSets" from the left-hand menu.
-3.  Click on "Create StackSet".
-4.  In the "StackSet Details" section, give your StackSet a name, description, and choose a template source.
-5.  In the "Deployment options" section, select "AWS Organizations" as the deployment target.
-6.  In the "Permissions" section, specify the permissions required to deploy your StackSet.
-7.  Click on "Next" to proceed to the "StackSet Settings" section.
-8.  In the "StackSet Settings" section, select "Enable AWS Organizations" and choose the AWS Organizations entity to deploy your StackSet to.
-9.  Click on "Next" to proceed to the "Review" section.
-10. Review your StackSet configuration and click on "Create StackSet".
-11. Once your StackSet is created, you can deploy it to the AWS accounts in your organization by creating a StackSet instance.
+
+3.  Click **Enable trusted access** on the banner ofr "Enable trusted access with AWS Organizations to use service managed permissions".
+
+    ![Section1_2.2](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_2.2.png)
+
+4.  Click on "Create StackSet".
+5.  In the "StackSet Details" section, give your StackSet a name, description, and choose a template source.
+6.  In the "Deployment options" section, select "AWS Organizations" as the deployment target.
+7.  In the "Permissions" section, specify the permissions required to deploy your StackSet.
+8.  Click on "Next" to proceed to the "StackSet Settings" section.
+9.  In the "StackSet Settings" section, select "Enable AWS Organizations" and choose the AWS Organizations entity to deploy your StackSet to.
+10.  Click on "Next" to proceed to the "Review" section.
+11. Review your StackSet configuration and click on "Create StackSet".
+12. Once your StackSet is created, you can deploy it to the AWS accounts in your organization by creating a StackSet instance.
 
 
 ### 3.0. Deploy Sample Workload.
