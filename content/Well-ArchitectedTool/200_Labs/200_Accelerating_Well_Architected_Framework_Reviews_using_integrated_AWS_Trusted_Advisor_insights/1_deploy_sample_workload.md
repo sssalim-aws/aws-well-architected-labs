@@ -18,6 +18,8 @@ Follow below instructions to configure the workload:
 
 ### 1.0. Provision the Workload Account using AWS Organization.
 
+In this first step you will provision an AWS Account that you will use to run the Sample Workload.
+
 1. Sign in to the AWS Management Console using your Administrator credentials.
 2. Navigate to the AWS Organizations console.
 
@@ -38,22 +40,29 @@ Follow below instructions to configure the workload:
     ![Section1_1.6](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.6.png)
 
 7. Enter `Workload` as the name of the OU and click **Create organizational unit**.
-8. Navigate back to the **AWS accounts** page and  tab and click on **Add an AWS Account**.
+
+8. Click on the Organizational unit you just created, and take note of the Organization Unit ID as per screenshot.
+
+    ![Section1_1.7a](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.7a.png)
+
+9. Navigate back to the **AWS accounts** page and  tab and click on **Add an AWS Account**.
 
     ![Section1_1.8](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.8.png)
 
-9. Enter `SampleWorkload` as the name of the account, type in your `email address` for the account.
+10. Enter `SampleWorkload` as the name of the account, type in your `email address` for the account.
    Wait for the email to arrive in your inbox and verify the temail.
 
-10. Nagivate or referesh the "AWS accounts" page view.
-11. Select the new account you just create, then click on **Actions** and **Move** under AWS account.
-12. Select the **Wordload** OU you created before, then click **Move AWS Account**
+11. Nagivate or referesh the "AWS accounts" page view.
+12. Select the new account you just create, then click on **Actions** and **Move** under AWS account.
+13. Select the **Wordload** OU you created before, then click **Move AWS Account**
 
     ![Section1_1.12](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.12.png)
 
-13. You have now created the Sample Workload Account in the Workload Organization Unit.
+14. You have now created the Sample Workload Account in the Workload Organization Unit.
 
-### 2.0. Configure AWS CloudFormation StackSet.
+
+
+### 2.0. Configure AWS CloudFormation StackSet for assume role.
 
 1.  Navigate to the AWS Organizations console.
     
@@ -65,30 +74,45 @@ Follow below instructions to configure the workload:
 
     ![Section1_2.2](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_2.2.png)
 
-4.  Click on "Create StackSet".
-5.  In the "StackSet Details" section, give your StackSet a name, description, and choose a template source.
-6.  In the "Deployment options" section, select "AWS Organizations" as the deployment target.
-7.  In the "Permissions" section, specify the permissions required to deploy your StackSet.
-8.  Click on "Next" to proceed to the "StackSet Settings" section.
-9.  In the "StackSet Settings" section, select "Enable AWS Organizations" and choose the AWS Organizations entity to deploy your StackSet to.
-10.  Click on "Next" to proceed to the "Review" section.
-11. Review your StackSet configuration and click on "Create StackSet".
-12. Once your StackSet is created, you can deploy it to the AWS accounts in your organization by creating a StackSet instance.
+### 3.0. Deploy Sample Workload Using Stackset.
+
+In this first step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stackset that builds a sample workload along with the necessary underlying resource. 
+
+1. Download the sample workload CloudFormation Template here.
+
+2. Navigate to the AWS CloudFormation console.
+
+3. Click on "StackSets" in the navigation pane and then click on "Create StackSet".
+
+4. Under Specify template, select **Upload a template file** and upload the file you downloaded in step 1. Then Click on **Next**.
+
+5. Specify `walab-wata-sample-workload` as the **StackSet Name**.
+
+6. Leave all settings as default and click **Next**.
+
+7. Leave Execution configuration as **Inactive** then click **Next**.
+
+8. In the **Deployment locations** section, select **Deploy stacks in organizational units** 
+
+9. Under **AWS OU ID** enter in the Organizational Unit ID you captured in step 1 previously.
+
+    ![Section3_9](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_9.png)
 
 
-### 3.0. Deploy Sample Workload.
 
-In this first step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stack that builds a sample workload along with the necessary underlying resource. You can choose the to deploy stack in one of the regions below. 
+Select the deployment options that you want to use for the StackSet. You can choose to deploy to all accounts in the selected OU, or you can select specific accounts to deploy to.
 
-1. Click on the link below to deploy the stack. This will take you to the CloudFormation console in your account. Use `walab-wata-sample-workload` as the stack name, take the default values for all options, and create stack.
+Review the settings for the StackSet and click on "Create StackSet".
 
-    * **us-west-2** : [here](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacksets/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
-    
+Once the StackSet has been created, you can deploy it to the selected accounts by clicking on "Deploy to accounts" in the StackSet console.
 
-    * **ap-southeast-2** : [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2#/stacksets/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
-    
+In the "Deployment options" section, select the accounts that you want to deploy to and then select the deployment mode that you want to use.
 
-    * **ap-southeast-1** : [here](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacksets/create/review?stackName=walab-wata-sample-workload&templateURL=https://aws-well-architected-labs-singapore.s3.ap-southeast-1.amazonaws.com/watools/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/sample_workload_environment.yaml)
+Review the settings for the deployment and then click on "Deploy".
+
+Monitor the progress of the deployment in the StackSet console. Once the deployment is complete, you can verify that the resources have been provisioned in the selected accounts.
+
+
 
 
 
