@@ -78,7 +78,7 @@ In this first step you will provision an AWS Account that you will use to run th
 
 In this first step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stackset that builds a sample workload along with the necessary underlying resource. 
 
-1. Download the sample workload CloudFormation Template here.
+1. Download the sample workload CloudFormation Template [here](https://raw.githubusercontent.com/sssalim-aws/aws-well-architected-labs/L200_WAFR_Acceleration/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/sample_workload_environment.yaml).
 
 2. Navigate to the AWS CloudFormation console.
 
@@ -98,20 +98,9 @@ In this first step you will provision a [CloudFormation](https://aws.amazon.com/
 
     ![Section3_9](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_9.png)
 
+10. Specify the region you wish to deploy the workload to, Click **Next**, Click **Submit**
 
-
-Select the deployment options that you want to use for the StackSet. You can choose to deploy to all accounts in the selected OU, or you can select specific accounts to deploy to.
-
-Review the settings for the StackSet and click on "Create StackSet".
-
-Once the StackSet has been created, you can deploy it to the selected accounts by clicking on "Deploy to accounts" in the StackSet console.
-
-In the "Deployment options" section, select the accounts that you want to deploy to and then select the deployment mode that you want to use.
-
-Review the settings for the deployment and then click on "Deploy".
-
-Monitor the progress of the deployment in the StackSet console. Once the deployment is complete, you can verify that the resources have been provisioned in the selected accounts.
-
+11. Wait until deployment is complete, and your Stack Operation status is **SUCCEEDED**
 
 
 
@@ -121,40 +110,5 @@ Monitor the progress of the deployment in the StackSet console. Once the deploym
 You have now completed the first section of the Lab.
 
 You should have a sample workload architecture which we will use for the remainder of the lab.
-
- 
-<!-- ### 1.1. Confirm the Deployment status.
-
-Once the application is successfully deployed, go to your [CloudFormation console](https://console.aws.amazon.com/cloudformation/home?region=ap-southeast-2) and locate the stack named `walab-ops-sample-application`.
-
-  1. Confirm that the stack is in a **'CREATE_COMPLETE'** state. 
-  2. Record the following output details as it will be required later:
-  3. Take note of the DNS value specified under **OutputApplicationEndpoint**  of the Outputs.
-
-      The screenshot below shows the output from the CloudFormation stack:
-
-      ![Section2 DNS Output](/Operations/200_Automating_operations_with_playbooks_and_runbooks/Images/section2-dns-outputs.png)
-
-  4. Check for an email sent to the system operator and owner addresses you've specified in the build_application.sh script. This email should also be visible in the CloudFormation parameter under in the **SystemOpsNotificationEmail** and **SystemOwnerNotificationEmail**.
-
-  5. Click `confirm subscription` on the email links to subscribe.
-
-      ![Section2 DNS Output](/Operations/200_Automating_operations_with_playbooks_and_runbooks/Images/section2-email-confirm.png)
-
-  {{% notice note %}}
-  There will be 2 emails sent to your address, please ensure to subscribe to **both** of them.
-  {{% /notice %}} 
-
--->
-
-<!-- 
-### 1.2. Test Workload. -->
-
-<!-- In this section, you will be testing the encrypt API action from the deployed application. 
-
-The application will take a JSON payload with `Name` as the identifier and `Text` key as the value of the secret message.
-
-The application will encrypt the value under `Text` key with a designated KMS key and store the encrypted text in the RDS database with `Name` as the primary key. -->
-
 
 {{< prev_next_button link_prev_url="../" link_next_url="../2_create_workload_review/" />}}

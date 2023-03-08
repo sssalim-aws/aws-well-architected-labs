@@ -1,10 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
 Parameters:
-  GitRepositoryURL:
-    Description: The Git repository URL for the project we are cloning
-    Type: String
-    Default: https://github.com/stephensalim/aws-well-architected-labs.git
-
   InstanceType:
     Description: WebServer EC2 instance type
     Type: String
