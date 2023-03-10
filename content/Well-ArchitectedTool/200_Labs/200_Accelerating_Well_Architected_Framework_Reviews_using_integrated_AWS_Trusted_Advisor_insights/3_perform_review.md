@@ -15,4 +15,4 @@ Once the feature is enabled, additional insights will be noticeable about the re
 
 2. Trusted Advisor checks are available, which provide insights related to the best practice in the question. You will also notice the state of resources recommendations and the count of resources. Trusted Advisor checks that relate to the best practice “Deploy the workload to multiple locations” are displayed. One of the Trusted Advisor checks identified with a x in a circle (denoting “Action recommended”) status is on the Amazon EC2 Availability Zone Balance.
 
-{{< prev_next_button link_prev_url="../2_create_workload" link_next_url="../4_cleanup/" />}}
+{{< prev_next_button link_prev_url="../2_prepare_workload_for_review" link_next_url="../4.streamline_jira/" />}}

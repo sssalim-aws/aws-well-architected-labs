@@ -1,10 +1,11 @@
 ---
-title: "Create a Well-Architected Workload"
+title: "Prepare Well-Architected Framework Review Workload"
 date: 2020-12-17T11:16:09-04:00
 chapter: false
 weight: 2
 pre: "<b>2. </b>"
 ---
+ 
  
 
 With the sample workload deployed, you can now conduct the AWS Well-Architected Framework Review on it. The purpose of this review exercise is to measure the alignment of the workload with the AWS Well-Architected Framework Best Practices. Information about the workload architecture and practices is gathered through conversations with related stakeholders, guided by the questions and information in the AWS Well-Architected Tool. 
@@ -45,5 +46,5 @@ You have defined a workload to review.
 
 Click on **Next Step** to continue to the next section.
 
-{{< prev_next_button link_prev_url="../1_deploy_infrastructure/" link_next_url="../3_perform_review/" />}}
+{{< prev_next_button link_prev_url="../1_deploy_sample_workload/" link_next_url="../3_perform_review/" />}}
  
