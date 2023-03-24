@@ -8,7 +8,7 @@ Resources:
   WARole:
     Type: 'AWS::IAM::Role'
     Properties:
-      RoleName: !Sub WellArchitectedRoleForTrustedAdvisor-${ManagementAccount}
+      RoleName: WAToolTrustedRole
       Description: "IAM role for WA Tool"
       Path: /
       AssumeRolePolicyDocument:
@@ -27,7 +27,20 @@ Resources:
                 "aws:SourceArn": !Sub 
                                     - 'arn:aws:wellarchitected:*:${Workload_Owner_Account}:workload/*'
                                     - { Workload_Owner_Account: !Ref ManagementAccount}
-    
+          - Effect: Allow
+            Principal:
+              AWS:
+                !Sub
+                  - 'arn:aws:iam::${Workload_Owner_Account}:root'
+                  - { Workload_Owner_Account: !Ref ManagementAccount}
+            Action:
+              - 'sts:AssumeRole'
+            Condition:
+               StringLike:
+                "aws:PrincipalArn":
+                  !Sub
+                    - 'arn:aws:iam::${Workload_Owner_Account}:role/*-LambdaWATrackerRole-*'
+                    - { Workload_Owner_Account: !Ref ManagementAccount}
   ExternalInlinePolicy:
     Type: AWS::IAM::Policy
     Properties: 
@@ -46,6 +59,11 @@ Resources:
               - trustedadvisor:DescribeCheckItems
             Resource:
               - !Sub arn:aws:trustedadvisor:*:${AWS::AccountId}:checks/*
+          - Effect: Allow
+            Action:
+              - tag:GetResources
+              - support:DescribeTrustedAdvisorCheckResult
+            Resource: '*'
       PolicyName: TrustedAdvisorWAInlinePolicy
       Roles: 
         - !Ref WARole
