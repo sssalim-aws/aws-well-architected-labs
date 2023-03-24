@@ -185,7 +185,6 @@ def get_ta_check_summary(bp_ta_check_ids_list):
 
 def add_flagged_resources(bp_ta_checks, workload_resources, assumed_role_credentials = None):
     workload_resources = get_workload_resources(assumed_role_credentials)
-    logger.info(f'workload_resources in add_flagged_resources {workload_resources}') # test
 
     if assumed_role_credentials != None:
         ta_client_workload_account = boto3.client(
@@ -205,7 +204,7 @@ def add_flagged_resources(bp_ta_checks, workload_resources, assumed_role_credent
             checkId=check['id'],
             language='en'
         )['result']
-        logger.info(f'check_result in add_flagged_resources {check_result}') # test
+
         # Adding only flagged resources related to the workload that are in 'warning' or 'error' TA status.
         if check_result['status'] in ['warning', 'error']:
             for flagged_resource in check_result['flaggedResources']:
@@ -324,7 +323,7 @@ def create_ops_item(answer, choice, bp_ta_checks, WORKLOAD_ID, LENS_ALIAS, accou
         logger.info(f'No flagged resources for this Best Practice {choice["choiceId"]} on any of its Trusted Advisor checks')
 
 def create_jira_issue(jira_client, answer, choice, bp_ta_checks, WORKLOAD_ID, LENS_ALIAS, account_id, workload_name):
-    logger.info(f'bp_ta_checks in create_jira_issue {bp_ta_checks}') # test
+
     # Filter out any TA Check for which there were no flagged resources.
     bp_ta_checks_flagged = [d for d in bp_ta_checks if len(d['flaggedResources']) > 0]
 
@@ -459,7 +458,7 @@ def lambda_handler(event, context):
                 # Creates initial schema list for all TA checks relevant to the BP.
                 # E.g. [{'id': 'R365s2Qddf', 'name': 'Amazon S3 Bucket Versioning', 'taRecommedationUrls': ['https://docs.aws.amazon.com/.../'], 'metadataOrder': ['Region', 'Bucket Name']}]
                 bp_ta_checks = get_ta_check_summary(bp_ta_check_ids_list)
-                logger.info(f'bp_ta_checks before add_flagged_resources {bp_ta_checks}') # test
+
                 # Retrieving TA Check results and adding only the flagged resources related to the workload that are in 'warning' or 'error' TA status.
                 add_flagged_resources(bp_ta_checks, account_id, assumed_role_credentials)
 
