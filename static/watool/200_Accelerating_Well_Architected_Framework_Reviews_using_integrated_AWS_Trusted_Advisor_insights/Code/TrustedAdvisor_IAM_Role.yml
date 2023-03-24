@@ -1,0 +1,51 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Parameters:
+  ManagementAccount:
+    Description: Management Account ID
+    Type: String
+
+Resources:
+  WARole:
+    Type: 'AWS::IAM::Role'
+    Properties:
+      RoleName: !Sub WellArchitectedRoleForTrustedAdvisor-${ManagementAccount}
+      Description: "IAM role for WA Tool"
+      Path: /
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - wellarchitected.amazonaws.com
+            Action:
+              - 'sts:AssumeRole'
+            Condition:
+               StringEquals:
+                "aws:SourceAccount": !Ref ManagementAccount
+               ArnEquals:
+                "aws:SourceArn": !Sub 
+                                    - 'arn:aws:wellarchitected:*:${Workload_Owner_Account}:workload/*'
+                                    - { Workload_Owner_Account: !Ref ManagementAccount}
+    
+  ExternalInlinePolicy:
+    Type: AWS::IAM::Policy
+    Properties: 
+      PolicyDocument: 
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - trustedadvisor:DescribeCheckRefreshStatuses
+              - trustedadvisor:DescribeCheckSummaries
+              - trustedadvisor:DescribeRiskResources
+              - trustedadvisor:DescribeAccount
+              - trustedadvisor:DescribeRisk
+              - trustedadvisor:DescribeAccountAccess
+              - trustedadvisor:DescribeRisks
+              - trustedadvisor:DescribeCheckItems
+            Resource:
+              - !Sub arn:aws:trustedadvisor:*:${AWS::AccountId}:checks/*
+      PolicyName: TrustedAdvisorWAInlinePolicy
+      Roles: 
+        - !Ref WARole
