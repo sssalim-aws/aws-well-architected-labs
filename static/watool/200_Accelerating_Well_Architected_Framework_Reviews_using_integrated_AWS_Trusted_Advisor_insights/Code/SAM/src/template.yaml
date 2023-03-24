@@ -290,7 +290,7 @@ Resources:
   TopicWorkloadBPUpdate:
     Type: 'AWS::SNS::Topic'
     Properties:
-      DisplayName: WALAB-WorkloadUpdateTopic
+      DisplayName: WAFR-ImprovementActionNotification
       TopicName: WorkloadBPUpdateTopic
   TopicWorkloadBPUpdateSubscription:
     Type: 'AWS::SNS::Subscription'
