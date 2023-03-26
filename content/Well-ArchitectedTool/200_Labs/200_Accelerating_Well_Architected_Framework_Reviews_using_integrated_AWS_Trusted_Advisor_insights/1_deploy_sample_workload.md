@@ -90,13 +90,15 @@ In this first step you will provision a [CloudFormation](https://aws.amazon.com/
 
 6. Leave all settings as default and click **Next**.
 
-7. Leave Execution configuration as **Inactive** then click **Next**.
+7. In the **Configure StackSet options** page add a new tag named ``ApplicationId`` with value ``MySampleWorkload`` (this will allow for the proper identification of resources as part of the solution described in Section 4 of this lab). Leave Execution configuration as **Inactive**, then click **Next**.
+
+    ![Section3_9](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_9.png)
 
 8. In the **Deployment locations** section, select **Deploy stacks in organizational units** 
 
 9. Under **AWS OU ID** enter in the Organizational Unit ID you captured in step 1 previously.
 
-    ![Section3_9](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_9.png)
+    ![Section3_10](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_10.png)
 
 10. Specify the region you wish to deploy the workload to, Click **Next**, Click **Submit**
 
