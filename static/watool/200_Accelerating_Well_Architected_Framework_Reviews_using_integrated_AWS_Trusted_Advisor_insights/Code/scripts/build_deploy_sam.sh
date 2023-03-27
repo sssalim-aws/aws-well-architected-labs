@@ -13,7 +13,7 @@ read -s -p "Enter your Jira API Token: " JIRA_API_TOKEN
 echo -e '\n##############################'
 echo 'Creating System Manager SecureString Parameter Store "walabjirasecret" with Jira API Token'
 echo '##############################'
-aws ssm put-parameter --name walabjirasecret --type SecureString --value $JIRA_API_TOKEN
+aws ssm put-parameter --name walabjirasecret --type SecureString --overwrite --value $JIRA_API_TOKEN
 
 cd ~/environment/aws-well-architected-labs/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/SAM/
 
