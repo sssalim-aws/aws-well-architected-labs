@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+  Cloud9:
+    Type: AWS::Cloud9::EnvironmentEC2
+    Properties:
+      AutomaticStopTimeMinutes: 30
+      Description: Well Architected lab workspace
+      InstanceType: t2.small
+      ImageId: amazonlinux-2-x86_64
+      Name: !Sub "WellArchitected-${AWS::StackName}"
+
+Outputs:
+  Cloud9DevEnvUrl:
+    Description: Well Architected lab workspace
+    Value: !Sub "https://${AWS::Region}.console.aws.amazon.com/cloud9/ide/${Cloud9}"
+
