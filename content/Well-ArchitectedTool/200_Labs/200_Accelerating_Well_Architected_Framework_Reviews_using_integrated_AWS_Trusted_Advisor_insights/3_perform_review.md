@@ -51,4 +51,4 @@ And you can also identify the DB instance that was deployed in a single Availabi
 
 ![RDS Multi-AZ](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ta_rds.png)
 
-{{< prev_next_button link_prev_url="../2_create_workload" link_next_url="../4_cleanup/" />}}
+{{< prev_next_button link_prev_url="../2_create_workload" link_next_url="../4_streamline_jira/" />}}
