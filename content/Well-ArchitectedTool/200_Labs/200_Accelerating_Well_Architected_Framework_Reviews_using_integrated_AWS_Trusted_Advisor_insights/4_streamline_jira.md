@@ -1,6 +1,6 @@
 ---
-title: "Manage Improvement Items with change management system"
-menutitle: "Manage Improvement Items with change management system"
+title: "(Optional) Manage Improvement Items with change management system"
+menutitle: "(Optional) Manage Improvement Items with change management system"
 date: 2021-08-31T11:16:09-04:00
 chapter: false
 weight: 4
@@ -29,41 +29,9 @@ The steps and integration pattern in this lab section are intended to provide gu
 
 In this first step, we are going to create a Jira account, a new Jira Project and a Jira API Token. 
 
-<<<<<<< HEAD
-Follow these steps to proceed.
-
-
-### 1.0 Prepare Cloud9 workspace.
-
-In this step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stack that builds a Cloud9 workspace. This Cloud9 workspace will be used to run the provisioning script for JIRA integration. 
-
-
-1. Download the sample workload CloudFormation Template [here](https://raw.githubusercontent.com/sssalim-aws/aws-well-architected-labs/L200_WAFR_Acceleration/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/cloud9.yaml).
-
-2. Navigate to the AWS CloudFormation console.
-
-3. Click on "StackSets" in the navigation pane and then click on "Create Stack".
-
-4. Under Specify template, select **Upload a template file** and upload the file you downloaded in step 1. Then Click on **Next**.
-
-5. Specify `walab-wata-cloud9-workspace` as the **StackSet Name**.
-
-6. Leave all settings as default and click **Next**, **Next**, **Submit** 
-
-7. Wait until deployment is complete, and your Stack status is **CREATE_COMPLETE**
-
-[section4.1.8](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section4.1.8.png)
-
-
-
-8. Go to your Outputs Tab and click on the **Cloud9DevEnvUrl** 
-
-
-=======
 1. Create a Jira account by following this [link](https://www.atlassian.com/try/cloud/signup?bundle=jira-software&edition=free). In the creation process, feel free to skip all the optional steps.
     
     **Important:** Take note of your Jira Site (e.g. ``https://my-site.atlassian.net/``)
->>>>>>> 235d1876c5726a4388ffd1da7b07781ac5ee84af
 
 2. When prompted, create a Jira project (use any name for it). If not prompted, you can always create a project from your Jira site. Just use the top navigation bar, from the "Projects" dropdown, select "Create project".
 
