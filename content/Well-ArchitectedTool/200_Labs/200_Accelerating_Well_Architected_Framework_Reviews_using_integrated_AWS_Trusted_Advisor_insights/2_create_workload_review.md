@@ -16,13 +16,12 @@ In this section of the lab, you will prepare for an AWS Well-Architected Framewo
 Please follow the steps below to proceed with the lab.
 
 ### 1.0. Provision IAM Role for Trusted Advisor in Workload Account.
-The AWS Well-Architected Tool is designed to help you review the state of your applications and workloads against architectural best practices, identify opportunities for improvement, and track progress over time. The Tool recieves data from Trusted Advisor periodically, using the roles created in IAM. 
 
-To view Trusted Advisor information from another AWS account, an IAM role needs to be created in each associated accounts. Refer to this guide [Activating Trusted Advisor for a workload in IAM](https://docs.aws.amazon.com/wellarchitected/latest/userguide/activate-ta-in-iam.html) for more details. 
+The AWS Well-Architected Tool is designed to help you review the state of your applications and workloads against architectural best practices, identify opportunities for improvement, and track progress over time. When enabled, the Tool can recieve data from Trusted Advisor periodically to provide you with data points around environment configuration during review. 
 
-We've created a CloudFormation template to facilate the process of creating IAM role in the workload account. YOu can follow the steps below to deploy the IAM roles into associated accounts for workload
+To view Trusted Advisor information a IAM role needs to be created to provide access to the necessary API calls. And if you are running on multiple AWS accounts, this role will have to be created on each associated AWS accounts. For details on which IAM permission to apply in the role, you can refer to this [guide](https://docs.aws.amazon.com/wellarchitected/latest/userguide/activate-ta-in-iam.html).
 
-You will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stackset that will deploy IAM Role with necessary permission policies for AWS WA Tool in Management Account to collect data in associated accounts for the workload
+To help you with this process, In this lab we've created a CloudFormation template to facilate the creationg of IAM role in the workload account. You can follow the steps below to deploy the IAM roles into associated accounts. You will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stackset that will deploy IAM Role with necessary permission policies for AWS WA Tool in Management Account to collect data in associated accounts for the workload
 
 1. Download the sample workload CloudFormation Template [here](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/TrustedAdvisor_IAM_Role.yml).
 
