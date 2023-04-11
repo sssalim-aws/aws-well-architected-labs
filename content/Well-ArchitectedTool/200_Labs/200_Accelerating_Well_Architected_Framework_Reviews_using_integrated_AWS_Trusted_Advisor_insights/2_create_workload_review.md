@@ -16,11 +16,9 @@ In this section of the lab, you will prepare for an AWS Well-Architected Framewo
 Please follow the steps below to proceed with the lab.
 
 ### 1.0. Provision IAM Role for Trusted Advisor in Workload Account.
-The AWS Well-Architected Tool is designed to help you review the state of your applications and workloads against architectural best practices, identify opportunities for improvement, and track progress over time.
+The AWS Well-Architected Tool is designed to help you review the state of your applications and workloads against architectural best practices, identify opportunities for improvement, and track progress over time. The Tool recieves data from Trusted Advisor periodically, using the roles created in IAM. 
 
-![Section2 WATool](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section2_watool.png)
-
-The AWS WA Tool periodically gets data from Trusted Advisor using the roles created in IAM. The IAM role is automatically created for the workload owner. However, to view Trusted Advisor information, the owners of any associated accounts on the workload must go to IAM and create a role, see [Activating Trusted Advisor for a workload in IAM](https://docs.aws.amazon.com/wellarchitected/latest/userguide/activate-ta-in-iam.html) for more details. If this role does not exist, AWS WA Tool cannot obtain Trusted Advisor information for that account and displays an error. 
+To view Trusted Advisor information from another AWS account, an IAM role needs to be created in each associated accounts. Refer to this guide [Activating Trusted Advisor for a workload in IAM](https://docs.aws.amazon.com/wellarchitected/latest/userguide/activate-ta-in-iam.html) for more details. 
 
 We've created a CloudFormation template to facilate the process of creating IAM role in the workload account. YOu can follow the steps below to deploy the IAM roles into associated accounts for workload
 
