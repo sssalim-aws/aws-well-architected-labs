@@ -112,4 +112,4 @@ You have now completed the first section of the Lab.
 
 You should have a sample workload architecture which we will use for the remainder of the lab.
 
-{{< prev_next_button link_prev_url="../" link_next_url="../2_prepare_workload_for_review/" />}}
+{{< prev_next_button link_prev_url="../" link_next_url="../2_create_workload_review/" />}}
