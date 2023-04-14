@@ -42,8 +42,6 @@ To help you with this process, In this lab we've created a CloudFormation templa
 
 9. Under **AWS OU ID** enter in the Organizational Unit ID you captured in section 1 previously.
 
-    ![Section3_9](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_9.png)
-
 10. Specify the region you wish to deploy the workload to, Click **Next**, Click **Submit**
 
 11. Wait until deployment is complete, and your Stack Operation status is **SUCCEEDED**
