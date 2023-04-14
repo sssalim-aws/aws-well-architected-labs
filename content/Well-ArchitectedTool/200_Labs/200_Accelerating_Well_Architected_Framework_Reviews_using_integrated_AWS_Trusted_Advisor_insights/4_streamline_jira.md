@@ -49,7 +49,7 @@ In this first step, we are going to create a Jira account, a new Jira Project an
 
 In this step, we will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stack that builds a Cloud9 workspace. This Cloud9 workspace will be used to build and deploy the AWS Serverless Application Model (AWS SAM) stack with the resources needed for the Well-Architected Tool and Jira integration.
 
-1. Download the sample workload CloudFormation Template [here](https://l200-wafr-acceleration.d2uci19mnxy1a4.amplifyapp.com/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/walab-ta-jira-cloud9.yml).
+1. Download the sample workload CloudFormation Template [here](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/walab-ta-jira-cloud9.yml).
 
 2. Go to the CloudFormation console in the same AWS Region where you created the Well-Architect Tool Workload from [Section 2](../2_create_workload_review/#20-create-aws-well-architected-tool-workload) of this lab.
     
