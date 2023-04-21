@@ -13,23 +13,18 @@ To ensure accountability towards these improvement action items, you need to inc
 
 In this section of the lab, we will walk you through a quick example of how you can take the insights and actionable items from the AWS Well-Architected Framework review and manage them in a popular change management system, Jira. You will streamline the creation and management of these actionable improvement items in Jira, using integrations made possible by AWS Well-Architected Tool APIs and AWS serverless services.
 
-
 ![section4_Arch](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section4_Arch.png)
 
 
-
----
-**NOTE**
-
-The steps and integration pattern in this lab section are intended to provide guidance and showcase what is possible towards activities that should be performed on improvement action items produced at the back of the AWS Well-Architected review. The code provided through this example implementation is not intended for production. Please contact aws-wa-geo-sa@amazon.com for any question.
-
----
+{{% notice note %}}
+**NOTE**: The steps and integration pattern in this lab section are intended to provide guidance and showcase what is possible towards activities that should be performed on improvement action items produced at the back of the AWS Well-Architected review. The code provided through this example implementation is not intended for production. Please contact aws-wa-geo-sa@amazon.com for any question.
+{{% /notice %}}
 
 ### 1. Creating a Jira Software account and related resources
 
 In this first step, we are going to create a Jira account, a new Jira Project and a Jira API Token. 
 
-1. Create a Jira account by following this [link](https://www.atlassian.com/try/cloud/signup?bundle=jira-software&edition=free). In the creation process, feel free to skip all the optional steps.
+1. Create a Jira account by following this [link.](https://www.atlassian.com/try/cloud/signup?bundle=jira-software&edition=free) In the creation process, feel free to skip all the optional steps.
     
     **Important:** Take note of your Jira Site (e.g. ``https://my-site.atlassian.net/``)
 

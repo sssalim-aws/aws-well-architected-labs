@@ -8,7 +8,7 @@ pre: "<b>2. </b>"
  
 With the sample workload deployed in the workload account, you can now conduct an AWS Well-Architected Framework Review on it.
 The purpose of the AWS Well-Architected Framework Review Exercise is to measure the alignment of your workload with the AWS Well-Architected Framework Best Practices. The review will identify areas for improvement that can be implemented in the workload to achieve better alignment.
-To assist with the review process, AWS Well-Architected provides a tool to access information about best practices that can be used as a guide during conversations with workload stakeholders. The tool provides insights into the configuration of AWS resources used in the workload by integrating with AWS Trusted Advisor checks. It also provides the capability to capture alignments and improvements over time.
+To assist with the review process, AWS Well-Architected provides a tool to access information about best practices that can be used as a guide during conversations with workload stakeholders. The AWS Well-Architected tool provides insights into the configuration of AWS resources used in the workload by integrating with AWS Trusted Advisor checks. It also provides the capability to capture alignments and improvements over time.
 
 ![Section2 Architecture](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section2_architecture.png)
 
@@ -17,13 +17,13 @@ Please follow the steps below to proceed with the lab.
 
 ### 1.0. Provision IAM Role for Trusted Advisor in Workload Account.
 
-The AWS Well-Architected Tool is designed to help you review the state of your applications and workloads against architectural best practices, identify opportunities for improvement, and track progress over time. When enabled, the Tool can recieve data from Trusted Advisor periodically to provide you with data points around environment configuration during review. 
+The AWS Well-Architected Tool is designed to help you review the state of your applications and workloads against architectural best practices, identify opportunities for improvement, and track progress over time. When enabled, the Tool can retrieve data from Trusted Advisor periodically to provide you with data points around environment configuration during the review.
 
-To view Trusted Advisor information a IAM role needs to be created to provide access to the necessary API calls. And if you are running on multiple AWS accounts, this role will have to be created on each associated AWS accounts. For details on which IAM permission to apply in the role, you can refer to this [guide](https://docs.aws.amazon.com/wellarchitected/latest/userguide/activate-ta-in-iam.html).
+To view Trusted Advisor information, an IAM role needs to be created to provide access to the necessary API calls. And if you are running on multiple AWS accounts, this role must be created on each associated AWS account. You can refer to this [guide](https://docs.aws.amazon.com/wellarchitected/latest/userguide/activate-ta-in-iam.html) for details on which IAM permission to apply in the role.
 
-To help you with this process, In this lab we've created a CloudFormation template to facilate the creationg of IAM role in the workload account. You can follow the steps below to deploy the IAM roles into associated accounts. You will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stackset that will deploy IAM Role with necessary permission policies for AWS WA Tool in Management Account to collect data in associated accounts for the workload
+In this lab, we’ve created a CloudFormation template to facilitate the creation of IAM role in the workload account. Follow the steps below to deploy the IAM roles into associated accounts. You will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) StackSets that will deploy IAM Role with necessary permission policies for AWS WA Tool in Management Account to collect Trusted Advisor data in the member accounts where the workload has been deployed. 
 
-1. Download the sample workload CloudFormation Template [here](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/TrustedAdvisor_IAM_Role.yml).
+1. Download the sample workload CloudFormation Template called **TrustedAdvisor_IAM_Role.yml** from [here](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/TrustedAdvisor_IAM_Role.yml).
 
 2. Navigate to the AWS CloudFormation console.
 
@@ -38,7 +38,7 @@ To help you with this process, In this lab we've created a CloudFormation templa
 
 7. Leave Execution configuration as **Inactive** then click **Next**.
 
-8. In the **Deployment locations** section, select **Deploy stacks in organizational units** 
+8. In the **Deployment locations** section, select **Deploy to organizational units (OUs)** 
 
 9. Under **AWS OU ID** enter in the Organizational Unit ID you captured in section 1 previously.
 
@@ -48,11 +48,11 @@ To help you with this process, In this lab we've created a CloudFormation templa
 
 ## 2.0 Create AWS Well-Architected Tool Workload.
 
-In this section of the lab, you will create a workload in the AWS Well-Architected tool  
+In this section of the lab, you will create a workload in the AWS Well-Architected tool.  
 
 The Well-Architected Framework Reviews are conducted per workload. A workload is a collection of resources and code that delivers business value, such as a customer-facing application or a backend process. 
  
-1. We will start with creating a workload in the Well-Architected Tool. Click **Define workload** associated with the necessary AWS tags.
+1. Search for Well-Architected Tool in the AWS console and click **Define workload** associated with the necessary AWS tags.
 
 ![Section2WATool](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section2_tool.png)
  

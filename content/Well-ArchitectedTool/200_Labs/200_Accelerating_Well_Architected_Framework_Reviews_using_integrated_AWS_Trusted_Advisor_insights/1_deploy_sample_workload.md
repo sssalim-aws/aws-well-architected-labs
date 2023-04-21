@@ -9,7 +9,7 @@ pre: "<b>1. </b>"
 
 
 In this section, you will deploy a sample workload resources that you will run the Well-Architected Framework Review against.
-The workload will be deployed in a separate AWS account simulating a multi account environment.  Once you have completed this lab, you will have a workload deployed in your AWS account with the architecture shown below.
+The workload will be deployed in a separate AWS account simulating a multi-account environment. Once you have completed this lab, you will have a workload deployed in your AWS account with the architecture shown below.
 
 ![SampleWorkload](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_sample_workload_architecture_before.png)
 
@@ -21,7 +21,7 @@ Follow below instructions to configure the workload:
 In this first step you will provision an AWS Account that you will use to run the Sample Workload.
 
 1. Sign in to the AWS Management Console using your Administrator credentials.
-2. Navigate to the AWS Organizations console.
+2. Navigate to the **AWS Organizations** console.
 
     ![Section1_1.2](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.2.png)
 
@@ -29,12 +29,11 @@ In this first step you will provision an AWS Account that you will use to run th
    Follow the prompts, and enter your email address to verify your email. 
    If you already have an AWS Organizations set up in your account, you can skip this step.
 
-4. Once your organization is created, navigate to the "AWS accounts" page from the left menu. Confirm that AWS Organizations is created. 
-   When your organization is fully created, you will be able to view your Root OU of your organizations as per screenshot below.
+4. Once your organization is created, navigate to the “AWS accounts” page from the left menu. Confirm that AWS Organizations is created. When your organization is fully created, you will be able to view the Root OU of your organization as per the screenshot below.
 
     ![Section1_1.4](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.4.png)
 
-5. Select the **Root** OU, then click on **Actions**.
+5. Tick the checkbox for the **Root** OU, then click on **Actions**.
 6. Under **Organizational Unit** click on **Create new**.
 
     ![Section1_1.6](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.6.png)
@@ -49,36 +48,41 @@ In this first step you will provision an AWS Account that you will use to run th
 
     ![Section1_1.8](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.8.png)
 
-10. Enter `SampleWorkload` as the name of the account, type in your `email address` for the account.
-   Wait for the email to arrive in your inbox and verify the temail.
+10. **Create an AWS Account** is selected by default. Enter `SampleWorkload` as the name of the account, and type in your `email address` for the account.Leave IAM role name as is.
+   Then, wait for the email to arrive in your inbox and verify the email.
+
+{{% notice note %}}
+**NOTE**: Use a valid and unique email address. The account could not be created if another AWS account with that email address already exists.
+{{% /notice %}}
 
 11. Nagivate or referesh the "AWS accounts" page view.
-12. Select the new account you just create, then click on **Actions** and **Move** under AWS account.
+12. Tick the checkbox for the new account you just created, then click on **Actions** and **Move** under AWS account.
 13. Select the **Wordload** OU you created before, then click **Move AWS Account**
 
     ![Section1_1.12](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.12.png)
 
-14. You have now created the Sample Workload Account in the Workload Organization Unit.
+14. You have now created the **Sample Workload** Account in the **Workload** Organization Unit.
 
+    ![Section1_1.13](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.13.png)
 
 
 ### 2.0. Configure AWS CloudFormation StackSet for assume role.
 
-1.  Navigate to the AWS Organizations console.
+1.  Navigate to **CloudFormation** console.
     
     ![Section1_2.1](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_2.1.png)
 
 2.  Choose "StackSets" from the left-hand menu.
 
-3.  Click **Enable trusted access** on the banner ofr "Enable trusted access with AWS Organizations to use service managed permissions".
+3.  Click **Activate trusted access** on the banner ofr "Activate trusted access with AWS Organizations to use service managed permissions".
 
     ![Section1_2.2](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_2.2.png)
 
 ### 3.0. Deploy Sample Workload Using Stackset.
 
-In this first step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) stackset that builds a sample workload along with the necessary underlying resource. 
+In this first step you will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) StackSets that build a sample workload along with the necessary underlying resource. 
 
-1. Download the sample workload CloudFormation Template [here](https://raw.githubusercontent.com/sssalim-aws/aws-well-architected-labs/L200_WAFR_Acceleration/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/sample_workload_environment.yaml).
+1. Download the sample workload CloudFormation Template called **sample_workload_environment.yaml** from [here](https://raw.githubusercontent.com/sssalim-aws/aws-well-architected-labs/L200_WAFR_Acceleration/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/sample_workload_environment.yaml).
 
 2. Navigate to the AWS CloudFormation console.
 
@@ -94,7 +98,7 @@ In this first step you will provision a [CloudFormation](https://aws.amazon.com/
 
     ![Section3_9](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_9.png)
 
-8. In the **Deployment locations** section, select **Deploy stacks in organizational units** 
+8. In the **Deployment locations** section, select **Deploy to organizational units (OUs)** 
 
 9. Under **AWS OU ID** enter in the Organizational Unit ID you captured in step 1 previously.
 
