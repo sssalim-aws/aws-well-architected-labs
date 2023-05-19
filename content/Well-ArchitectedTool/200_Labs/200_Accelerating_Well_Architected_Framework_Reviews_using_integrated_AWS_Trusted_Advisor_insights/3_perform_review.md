@@ -43,7 +43,7 @@ Which in this example, indicates that the Amazon EC2 instances in the Sample Wor
 
 Along with that, the Amazon RDS in the Sample Workload account, also does not have Multi-AZ enabled, which increases risk of service interuption when failure occurs.
 
-6. To locate the  resources being checked, you can access the Sample Workload Account by following the instruction to **Switch to the role for member account** described [here](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_access-cross-account-role). And use the **Sample Workload** Account Id you took note in the first section of this lab.
+6. To locate the  resources being checked, you can access the Sample Workload Account by following the instruction to **Switch to the role for member account** described [here](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_access-cross-account-role), and use the **Sample Workload** Account Id you took note in the first section of this lab.
 
 7. Once you are logged in, you can open the Trusted Advisor Console and identify AWS resources related to the check as per screenshots below.
 
