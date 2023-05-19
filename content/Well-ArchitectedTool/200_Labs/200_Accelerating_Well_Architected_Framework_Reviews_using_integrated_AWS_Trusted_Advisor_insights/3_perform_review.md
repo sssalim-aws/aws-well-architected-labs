@@ -21,41 +21,33 @@ In this case, we will use [Question 10 from the Reliability Pillar](https://wa.a
 ![REL10](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_q10.png)
 
 
-3. You can select a question in the Well-Architected Tool to access Trusted Advisor checks as insights. If Trusted Advisor checks related to REL 10 question are available, there will be a **View checks** button like the screenshot below or you can also select the **Trusted Advisor checks** tab.
+3. You can select a question in the Well-Architected Tool to access Trusted Advisor checks as insights. If Trusted Advisor checks related to REL 10 question are available, there will be a **View checks** button as presented in the screenshot below.Alternatively you can also select the **Trusted Advisor checks** tab.
 
 ![Trusted Advisor Tab](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_access_ta.png)
 
-4. Trusted Advisor checks are available, which provide insights related to the best practice "**Deploy the workload to multiple locations**". You will also notice the state of resources recommendations and the count of resources. 
+4. The Trusted Advisor checks provides further insights around resource configurations and how it it aligned to the related best practice in thr question.
+
+In this scenario, under Reliability Best Practice of ["**Deploy the workload to multiple locations**"](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_fault_isolation_multiaz_region_system.html). 
+
+You will see several Trusted Advisor checks including **Amazon EC2 Availability Zone Balance** and **Amazon RDS Multi-AZ**.Along with the total number of identified resources in each account. 
 
 ![Trusted Advisor](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ta.png)
 
-**Amazon EC2 Availability Zone Balance** check appears to be **Action recommended** with a x in a red circle. Click info to see **Alert Criteria** and **Recommended Action**. 
+5. To find further information about the check, you can click on the **Info** link, to show details and context about the Trusted Advisor check behaviour.
 
 ![Trusted Advisor EC2 AZ](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ec2_az.png)
 
-Amazon EC2 instances in the sample workload were not deployed across Availability Zones in a region, which does not meet this best practice. Availability Zones are distinct locations that are designed to be insulated from failures in other Availability Zones and to provide inexpensive, low-latency network connectivity to other Availability Zones in the same region. By launching instances in multiple Availability Zones in the same region, you can help protect your applications from a single point of failure.
-
-Amazon RDS Multi-AZ check also appears to be Action recommended with a x in a red circle. Click info to see Alert Criteria and Recommended Action.
+Which in this example, indicates that the Amazon EC2 instances in the Sample Workload Account are at risk, as they are not deployed across Availability Zones in the region. 
 
 ![Trusted Advisor RDS Multi-AZ](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_rds.png)
 
-Amazon RDS instance in the sample workload was deployed in a single Availability Zone. 
-Multi-AZ deployments enhance database availability by synchronously replicating to a standby instance in a different Availability Zone. During planned database maintenance or the failure of a DB instance or Availability Zone, Amazon RDS automatically fails over to the standby so that database operations can resume quickly without administrative intervention.
+Along with that, the Amazon RDS in the Sample Workload account, also does not have Multi-AZ enabled, which increases risk of service interuption when failure occurs.
 
-**======= Start  =======**
+6. To locate the  resources being checked, you can access the Sample Workload Account by following the instruction to **Switch to the role for member account** described [here](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_accounts_access.html#orgs_manage_accounts_access-cross-account-role). And use the **Sample Workload** Account Id you took note in the first section of this lab.
 
-**Please delete this area once we add how to log into worklaod account.**
-
-**I managed to log into worklaod account by resetting password using "Forgot Password" option for step 5. Is this the appropriate way to log into worklaod account?**
-
-**======= End =======**
-
-
-5. Exploring the Trusted Advisor Console in the workload account, you can identify the region has uneven EC2 distribution.
+7. Once you are logged in, you can open the Trusted Advisor Console and identify AWS resources related to the check as per screenshots below.
 
 ![EC2 AZ](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ta_ec2_az.png)
-
-And you can also identify the DB instance that was deployed in a single Availability Zone
 
 ![RDS Multi-AZ](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ta_rds.png)
 

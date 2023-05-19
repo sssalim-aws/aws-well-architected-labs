@@ -66,6 +66,8 @@ In this first step you will provision an AWS Account that you will use to run th
     ![Section1_1.13](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section1_1.13.png)
 
 
+15. Take note of the **Sample Workload** Account ID created in previous step. 
+
 ### 2.0. Configure AWS CloudFormation StackSet for assume role.
 
 1.  Navigate to **CloudFormation** console.
