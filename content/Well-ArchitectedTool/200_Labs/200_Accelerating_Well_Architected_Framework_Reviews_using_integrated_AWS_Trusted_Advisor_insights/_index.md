@@ -49,7 +49,7 @@ The skills you learn will help you to accelerate your cloud optimization by redu
 {{% /notice %}}
 
 ## Lab Duration:
-Estimated time required to complete this lab is *** hrs.
+Estimated time required to complete this lab is 1 hour.
 
 {{< prev_next_button link_next_url="./1_deploy_sample_workload/" button_next_text="Start Lab" first_step="true" />}}
 
