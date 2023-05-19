@@ -51,4 +51,10 @@ Along with that, the Amazon RDS in the Sample Workload account, also does not ha
 
 ![RDS Multi-AZ](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ta_rds.png)
 
+## Congratulations! 
+
+You have completed simulating an AWS Well-Architected Framework Review using Well-Architected Tool and Trusted Advisor. 
+
+Click on **Next Step** to continue to the next section.
+
 {{< prev_next_button link_prev_url="../2_create_workload" link_next_url="../4_streamline_jira/" />}}
