@@ -40,10 +40,9 @@ The skills you learn will help you to accelerate your cloud optimization by redu
 
 ## Prerequisites:
 
-* An [AWS Account](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html) that you are able to use for testing, that is not used for production or other purposes.
-* An Identity and Access Management (IAM) user or federated credentials into that account that has permissions to use Well-Architected Tool ([WellArchitectedConsoleFullAccess managed policy](https://docs.aws.amazon.com/wellarchitected/latest/userguide/security_iam_id-based-policy-examples.html#security_iam_id-based-policy-examples-full-access)).
-* Access to [AWS Trusted Advisor](https://aws.amazon.com/premiumsupport/knowledge-center/trusted-advisor-intro/) Amazon Trusted Advisor provides best practices (or checks) in four categories: cost optimization, security, fault tolerance, and performance improvement.
-* There will be a step to create a Jira Software account to complete Lab 4 in case you don't have it.
+* Business or Enterprise Support plan enabled in AWS Account.
+  To access relevant Trusted Advisor checks used in this lab, If  Business Support plan is not enabled, only 6 Trusted Advisor checks referenced [here](https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor-check-reference.html) are available.
+* (Optional) Access to [Atlassian JIRA](https://www.atlassian.com/software/jira) is required to complete section 4.
 
 {{% notice note %}}
 **NOTE**: You will be billed for any applicable AWS resources used as part of this lab, that are not covered in the AWS Free Tier.
