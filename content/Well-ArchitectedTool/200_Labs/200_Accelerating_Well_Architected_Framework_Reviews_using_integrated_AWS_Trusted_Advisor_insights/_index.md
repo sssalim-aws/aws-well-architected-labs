@@ -1,7 +1,7 @@
 ---
-title: "Level 200: Accelerating Well-Architected Framework reviews using AWS Trusted Advisor & JIRA"
-menutitle: "Level 200: Accelerating Well-Architected Framework reviews using AWS Trusted Advisor & JIRA"
-description: "Accelerating Well-Architected Framework reviews using AWS Trusted Advisor & JIRA"
+title: "Level 200: Running Well-Architected Framework Review using AWS Trusted Advisor Integration & JIRA"
+menutitle: "Level 200: Running Well-Architected Framework Review using AWS Trusted Advisor Integration & JIRA"
+description: "Running Well-Architected Framework Review using AWS Trusted Advisor Integration & JIRA"
 date: 2021-08-31T11:16:09-04:00
 chapter: false
 weight: 3
