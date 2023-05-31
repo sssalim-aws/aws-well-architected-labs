@@ -19,7 +19,7 @@ The following instructions will remove the resources that you have created in th
 1. Go back to the AWS Cloud9 console and connect again to the Cloud9 IDE terminal, change directory to the working folder where the script for building and deploying the SAM stack is located:
 
 ```
-cd ~/environment/aws-well-architected-labs/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/scripts/
+cd ~/environment/aws-well-architected-labs/static/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Code/scripts/
 ```
 
 2. Run the **section4_cleanup_resources.sh** script as below:
