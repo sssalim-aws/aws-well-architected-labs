@@ -7,7 +7,7 @@ echo -e '\n##############################'
 echo 'Deleting SAM Stack'
 echo '##############################'
 
-cd ~/environment/aws-well-architected-labs/static/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/SAM/
+cd ~/environment/aws-well-architected-labs/static/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Code/SAM/
 
 sam delete --stack-name well-architected-tool-ta-jira-lab-sam --no-prompts --region $AWS_REGION
 
