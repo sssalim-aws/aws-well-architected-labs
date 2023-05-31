@@ -10,7 +10,9 @@ The following instructions will remove the resources that you have created in th
 
 #### Cleaning up Sample Workload Resources
 
-1. Follow the instructions in the link to Delete the [StackSet Instances](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stackinstances-delete.html) and [StackSet]https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-delete.html) of your `walab-wata-sample-workload`
+1. Follow the instructions in these links to Delete the [StackSet Instances](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stackinstances-delete.html) and [StackSet]https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-delete.html) of your `walab-wata-sample-workload`
+
+2. Follow the instructions [here](https://docs.aws.amazon.com/wellarchitected/latest/userguide/workloads-delete.html) to delete the Well-Architected Tool Workload.
 
 #### Cleaning up SAM stack
 
