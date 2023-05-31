@@ -10,7 +10,7 @@ With the sample workload deployed in the workload account, you can now conduct a
 The purpose of the AWS Well-Architected Framework Review Exercise is to measure the alignment of your workload with the AWS Well-Architected Framework Best Practices. The review will identify areas for improvement that can be implemented in the workload to achieve better alignment.
 To assist with the review process, AWS Well-Architected provides a tool to access information about best practices that can be used as a guide during conversations with workload stakeholders. The AWS Well-Architected tool provides insights into the configuration of AWS resources used in the workload by integrating with AWS Trusted Advisor checks. It also provides the capability to capture alignments and improvements over time.
 
-![Section2 Architecture](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section2_architecture.png)
+![Section2 Architecture](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Images/section2_architecture.png)
 
 In this section of the lab, you will prepare for an AWS Well-Architected Framework Review of the sample workload by creating a workload resource in the AWS Well-Architected tool and enabling Trusted Advisor check capabilities.
 Please follow the steps below to proceed with the lab.
@@ -23,7 +23,7 @@ To view Trusted Advisor information, an IAM role needs to be created to provide 
 
 In this lab, we’ve created a CloudFormation template to facilitate the creation of IAM role in the workload account. Follow the steps below to deploy the IAM roles into associated accounts. You will provision a [CloudFormation](https://aws.amazon.com/cloudformation/) StackSets that will deploy IAM Role with necessary permission policies for AWS WA Tool in Management Account to collect Trusted Advisor data in the member accounts where the workload has been deployed. 
 
-1. Download the sample workload CloudFormation Template called **TrustedAdvisor_IAM_Role.yml** from [here](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Code/TrustedAdvisor_IAM_Role.yml).
+1. Download the sample workload CloudFormation Template called **TrustedAdvisor_IAM_Role.yml** from [here](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Code/TrustedAdvisor_IAM_Role.yml).
 
 2. Navigate to the AWS CloudFormation console.
 
@@ -54,11 +54,11 @@ The Well-Architected Framework Reviews are conducted per workload. A workload is
  
 1. Search for Well-Architected Tool in the AWS console and click **Define workload** associated with the necessary AWS tags.
 
-![Section2WATool](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section2_tool.png)
+![Section2WATool](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Images/section2_tool.png)
  
 2. Now you can [define a workload](https://docs.aws.amazon.com/wellarchitected/latest/userguide/define-workload.html):
  
-![Section2 DefiningAWorkload](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section2_DefiningAWorkload.png)
+![Section2 DefiningAWorkload](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Images/section2_DefiningAWorkload.png)
  
 The following are the required workload properties:
  
@@ -69,15 +69,15 @@ The following are the required workload properties:
 * aws-regions - The aws-regions in which your workload runs (us-east-1, etc).
 * lenses - The list of lenses associated with the workload. All workloads must include the "wellarchitected" lens as a base, but can include additional lenses. 
 
-3. Specify **workload account ID** created in Section 1 in the Account IDs field. This field is required to activate Trusted Advisor. 
+3. Specify **Workload account ID** created in Section 1 in the Account IDs field. This field is required to activate Trusted Advisor. 
 
-4. To enable the integration with Trusted Advisor, after the necessary workload information has been entered, within the <b>AWS Trusted Advisor” section</b>, tick on <b>Activate Trusted Advisor</b>
+4. To enable the integration with Trusted Advisor, after the necessary workload information has been entered, within the **AWS Trusted Advisor section**, tick on **Activate Trusted Advisor** and choose **Workload Metadata** as Resource Definition.
 
-![Enable Trusted Advisor](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/Enabling-the-Trusted-Advisor-feature.png)
+![Enable Trusted Advisor](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Images/Enabling-the-Trusted-Advisor-feature.png)
 
 5. Choose the lenses that apply to this workload. **AWS Well-Architected Framework** has been selected by default.
 
-![Lens](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/WAF_Lens.png)
+![Lens](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Images/WAF_Lens.png)
 
 ## Congratulations! 
 

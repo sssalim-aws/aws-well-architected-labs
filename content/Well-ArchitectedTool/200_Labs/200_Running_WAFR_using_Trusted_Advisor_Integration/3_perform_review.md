@@ -25,11 +25,11 @@ In this case, we will use [Question 10 from the Reliability Pillar](https://wa.a
 
 ![Trusted Advisor Tab](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_access_ta.png)
 
-4. The Trusted Advisor checks provides further insights around resource configurations and how it it aligned to the related best practice in thr question.
+4. The Trusted Advisor checks provides further insights around resource configurations and how it is aligned to the related best practice in thr question.
 
 In this scenario, under Reliability Best Practice of ["**Deploy the workload to multiple locations**"](https://docs.aws.amazon.com/wellarchitected/latest/framework/rel_fault_isolation_multiaz_region_system.html). 
 
-You will see several Trusted Advisor checks including **Amazon EC2 Availability Zone Balance** and **Amazon RDS Multi-AZ**.Along with the total number of identified resources in each account. 
+You will see several Trusted Advisor checks, including **Amazon EC2 Availability Zone Balance** and **Amazon RDS Multi-AZ**. Along with the total number of identified resources in each account. 
 
 ![Trusted Advisor](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/section3_ta.png)
 

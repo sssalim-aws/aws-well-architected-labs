@@ -29,7 +29,7 @@ In this lab, you will learn how to use AWS Well-Architected Tool Integration wit
 The skills you learn will help you to accelerate your cloud optimization by reducing the time required to measure workloads against the AWS best practices in the [AWS Well-Architected Framework.](https://aws.amazon.com/architecture/well-architected/)
 
 
-![OverallArchitecture](/watool/200_Accelerating_Well_Architected_Framework_Reviews_using_integrated_AWS_Trusted_Advisor_insights/Images/overall_architecture_00.png)
+![OverallArchitecture](/watool/200_Running_WAFR_using_Trusted_Advisor_Integration/Images/overall_architecture_00.png)
 
 
 ## Goals:
@@ -39,9 +39,7 @@ The skills you learn will help you to accelerate your cloud optimization by redu
 * Track and record Improvement action items in JIRA for accountability & visibility.
 
 ## Prerequisites:
-
-* Business or Enterprise Support plan enabled in AWS Account.
-  To access relevant Trusted Advisor checks used in this lab, If  Business Support plan is not enabled, only 6 Trusted Advisor checks referenced [here](https://docs.aws.amazon.com/awssupport/latest/user/trusted-advisor-check-reference.html) are available.
+* Business or Enterprise Support plan enabled in all AWS Account, to access relevant Trusted Advisor checks used in this lab.
 * (Optional) Access to [Atlassian JIRA](https://www.atlassian.com/software/jira) is required to complete section 4.
 
 {{% notice note %}}
